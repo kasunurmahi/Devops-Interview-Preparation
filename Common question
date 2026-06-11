@@ -1,1 +1,38 @@
-hoalsdn
+
+
+Devops Engineer Interview 
+===================================
+
+1. Can you Introduce yourself ???
+=====================================
+Yeah, Thanks for the opportunity 
+Iam mahidhar from kadapa district in andhra pradesh, I completed my gradation from iiit rk valley
+then i started my carrer with infosys limited and i have 4 years of experience as multi cloud devops engineer
+
+currently i am working for the molina health care client 
+i have hands on experience with azure cloud, terraform , azure devops, docker , kubernetes
+
+recently i contributed to a project called QNXT - which is critical application for molina
+where i closely work with the developers to manage git repo, PR policies and branching strategies and 
+
+i have successfully implemented end to end CICD pipeline creation which consist building, testing and deploying by using different deployment strategies
+
+i was also involved in migrating application deployment from appservices to microservices
+we used docker for containerizing the applications and building the images and pushing those to ACR
+and i managed and deployed these multiple containers into kubernetes.
+
+I have also worked with terraform for provisioning infrastructure on cloud based on client requirements
+like vm,vnet, storage accounts, app servies, acr and aks
+
+for monitoring we used application insights and azure monitor 
+and also i supported for DR activity to perform failover and failback through pipeines to ensure high availability 
+
+we used jira , azure boards and i serve ticketing tool for tracking 
+
+ i cleared external certifications like az 900, az 104, az400 
+
+yeah , that's what my professional introduction and the skills that i have possessed upto right now.
+now iam looking for a opportunity where i can enhance my skills and grow as a devops engineer
+
+thank you !!!!!!
+==============================================================================================================================================================================
