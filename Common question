@@ -36,3 +36,122 @@ now iam looking for a opportunity where i can enhance my skills and grow as a de
 
 thank you !!!!!!
 ==============================================================================================================================================================================
+
+what was your day to day activities and roles and responsibiltes in your project ???
+======================================================================================
+
+Coming to my day to day activities 
+my day starts with scrum call and incidents, jira stories, mails, tickets, issues are assigned to work 
+
+and currently iam working for QNXT/MAP/ application 
+it is one of the critical web-application in molina healthcare 
+where users can login to check the insurance policy, claims , payments and other details 
+
+for frontend we used angular, backed we used dot net api and database we used azure data services
+
+Once the developer is ready with code then push the code to azure repos
+i have implemented end to end CICD pipeline creation by using azure pipelines
+
+CI- consist git checkout, dependencies installation, unit testing , building by ms build, integrating sonar scan and publishing the artifacts 
+CD- release pipeline 
+configuring different environments like dev, qa,uat,  stg and prod with secure SPN service connections 
+application is deployed into appservices
+enable manual approvals and reviewers and by using change window deploying to production
+
+
+Coming to Roles and Responsiblites
+gathering the requirements 
+working with developer to manage repos, branching strategies , pr mereges
+creating IAAS and PAAS services on azure 
+
+Creating CICD pipelines
+integrating Sonarscan for code quality
+By using SPN -- creating Service connections
+managing secrets and certificates by azure keyvault 
+
+taking care of lower env deployements and prod deployments 2 times a week 
+debugging the pipeline issues and prod deployment failures
+monitoring the application logs and metrics 
+tickets sloving and incidents , mails 
+updating all efforts in jira 
+
+these are the day to day acitivties and roles and responsibilties
+=========================================================================================================================================
+
+
+what are the major critical issues that you resolved in pipeline deployments ????
+==================================================================================
+
+issues-- 
+nuget package version errors, 
+sonar scan failing, -- service connection  
+spn secret expires, 
+ADF linked services, 
+varaibles group miss matching ,
+
+secret expired on prod day -- sonar token -- 
+app service failure-- access issue 
+
+target server sql is faling due to offline again bring up online then deployed 
+
+docker -- acr image pulling image failure
+k8s -- imagepullback, imagecrashlop, pods creating , deployment pause , applciation is responding ,
+
+
+
+
+============================================================================================================================================
+
+How will you design CICD workflow from scratch for large enterprise application ????
+============================================================================
+
+If I need to design CICD workflow from scratch for large enterprise application
+
+i will follow some steps 
+
+1. I will gather the information and understand the architecture ---- is it monolithic, 2 or 3 tier, microservices, 
+      ---- which cloud platform ? , tech stack ?, deployment environments, security requirments, deployment target ??
+
+2. building the infrasturcture --- services like IAAS, PAAS-- VNET-- isolated network and 
+                                                                     self hosted agent for running the pipelines--- bcz --- one time depencency installation,
+                                                                     fast builds, security , cost optimization 
+                                                            microsoft agents also best in security --patching will taken by them 
+                                                            -- always new assign agent again fresh runs , new installation, and cant access to end points, no backps.
+                         
+3. for source management --- azure repos
+4.CICD pipeline creation
+5.secret management -- keyvaults--- secrets and certifications
+6.goverance -- giving less privilleget to user by rbac custom roles
+7.deployment stratgies
+8.monitoring
+9. roll backs if any failures
+
+I will recommened to  use Azure-Devops bcz all services are intergrated 
+
+
+this is the approach i will follow if i want to create cicd from  scratch 
+===========================================================================================================================================================
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
