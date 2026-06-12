@@ -2,5 +2,67 @@ Git Concepts Interview questions
 =================================
 
 
+Source code management --- all source code will store in GitHub
+
+git and github --- git is a distrubuted version control system, help dev to collaborate 
+Github is a remote respository stores all source code and history -- collabarate the developers.
+Centrilized version control 
+Distributed version control ---- high available 
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+what is the branching stratgies ??? which stratagies you used in your project ??
+==================================================================================
+
+A branching strategy is a workflow that defines how developers create, manage, merge, and release code changes in Git. 
+It helps teams collaborate without affecting main code.
+
+In my project, we used Git Flow branching strategy.
+We had separate branches for development, testing, and production releases.
+
+Branches Used
+main/master → Production code
+develop → latest development changes
+feature/* → New feature development to work
+release/* → Release preparation and testing
+hotfix/* → Production bug fixes after deployment 
+
+We had multiple developers working simultaneously and separate environments such as Dev, QA, UAT, and Production.
+Git Flow helped us isolate features, perform testing properly, and manage releases without affecting production.
+
+In my project, we used Git Flow. Developers created feature branches from the develop branch. 
+Once development was completed, they raised Pull Requests for code review. After approval, the code was merged into develop, 
+which triggered our Azure DevOps/Jenkins CI pipeline for build, testing, SonarQube analysis, and artifact creation. 
+For releases, we created release branches and deployed them to QA and UAT environments. 
+After successful testing, the release branch was merged into the main branch, 
+which triggered the production deployment pipeline. For urgent production issues, we used hotfix branches directly from main.
+
+this is the branching stratagies we flow in my project 
+====================================================================================================================================
+
+
+if you have 2 developers working on same paching things what excalty branching stragies you used for pull request 
+what are the merges ??
+In our project, every developer created a separate feature branch from develop. Once development was completed, 
+a Pull Request was raised. Before merging, code reviews, build validation, SonarQube scans, and testing were performed.
+If multiple developers worked on the same code area, they first synced their branch with the latest develop branch and resolved any merge conflicts.
+We mainly used Squash Merge through Azure DevOps to keep the Git history clean and easy to maintain.
+
+
+
+
+You mentioned terraform, what excatly you worked on terraform ???
+
+Can you help me with the moduler outline of the terraform ??? 
+
+what is the life cycle of the terraform ???
+
+what vm you have created ?? in azue 
+what licence you used while you are creating vm ???
+
+how many different pipelines you having ???
+how you run your workflows ??? --- 
+
+
+
 
 
