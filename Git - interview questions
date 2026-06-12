@@ -2,12 +2,16 @@ Git Concepts Interview questions
 =================================
 
 
-Source code management --- all source code will store in GitHub
+Source code management --- GIT, GITHUB
 
-git and github --- git is a distrubuted version control system, help dev to collaborate 
-Github is a remote respository stores all source code and history -- collabarate the developers.
-Centrilized version control 
-Distributed version control ---- high available 
+Git ---> Version control system---> It tracks the code changes -- if we modify the file-- each version saved and easy 
+                                      and save it in local system --- no internet needed.
+GithubActions ---> we can store pur code in online ---> all collaborate the team to work on the code --- saved all commits and history
+
+Centrilized version control --- place in central location and by using internet we connect and work on the code
+Distributed version control ---- high available --- 1st we can pull/ clone the code from repo and we can work the code and push the code to repo and all users can syn
+
+
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 what is the branching stratgies ??? which stratagies you used in your project ??
@@ -38,14 +42,25 @@ which triggered the production deployment pipeline. For urgent production issues
 
 this is the branching stratagies we flow in my project 
 ====================================================================================================================================
-
-
 if you have 2 developers working on same paching things what excalty branching stragies you used for pull request 
 what are the merges ??
+
 In our project, every developer created a separate feature branch from develop. Once development was completed, 
 a Pull Request was raised. Before merging, code reviews, build validation, SonarQube scans, and testing were performed.
 If multiple developers worked on the same code area, they first synced their branch with the latest develop branch and resolved any merge conflicts.
 We mainly used Squash Merge through Azure DevOps to keep the Git history clean and easy to maintain.
+
+how many merge types you used ???
+
+
+
+
+
+
+
+
+
+
 
 
 
