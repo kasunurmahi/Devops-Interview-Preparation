@@ -66,6 +66,7 @@ creating IAAS and PAAS services on azure
 
 Creating CICD pipelines
 integrating Sonarscan for code quality
+Creating variable groups for different environment 
 By using SPN -- creating Service connections
 managing secrets and certificates by azure keyvault 
 
@@ -131,9 +132,23 @@ I will recommened to  use Azure-Devops bcz all services are intergrated
 
 this is the approach i will follow if i want to create cicd from  scratch 
 ===========================================================================================================================================================
- 
+
+what are the deployment strategies that you are using in your pipelines ??
+===========================================================================
+
+coming to deployment strategies for critical applications we used blue green deployment where we can create 2 same environments with same configuration
+
+blue and green 
+in blue the current production application is avaliable 
+in green environment the new version once after testing we will shift the traffic from blue env to green env by load balancer ---  cost is high
+
+and for microservices deployments 
+we used rolling update--- pods will gradually deployed when old pods are terminated one by one  --- zero downtime ---- 
+
+canary deployment ---- used for eecommere application -- the new version will be tested within the few user if it good then we can increase the user percentage and use it.
 
 
+=============================================================================================================================================================================
 
 
 
