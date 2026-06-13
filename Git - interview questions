@@ -6,16 +6,85 @@ Source code management --- GIT, GITHUB
 
 Git ---> Version control system---> It tracks the code changes -- if we modify the file-- each version saved and easy 
                                       and save it in local system --- no internet needed.
-GithubActions ---> we can store pur code in online ---> all collaborate the team to work on the code --- saved all commits and history
+GitHub ---> we can store put code in online (cloud platform) ---> all collaborate the team to work on the code --- saved all commits and history
 
 Centrilized version control --- place in central location and by using internet we connect and work on the code
 Distributed version control ---- high available --- 1st we can pull/ clone the code from repo and we can work the code and push the code to repo and all users can syn
+
+================================================================================================================================================
+Git Flow --->working directory ---> staging area ----> local repository ---> Remote repository
+
+
+1-file changes and edit --> by git add . -- files to staging area ---> by suing git commit -m files saving to local repository
+last by git push --- > files will send from local to remote repository
+
+by using git pull --- we can pull the code from github( remote repo ) to local system 
+
+git pull --- is a combination of 2 commands -- git fetch and git merge 
+                          git fetch means --> it will only download the code 
+                          git merge means -- > it will merge and combine the branches 
+-----so wothout git and github we cann work with code....
+
+
+Git & Github
+
+git init
+git add . 
+git commit -m "commit "
+git clone 
+git push
+git pull 
+git fetch 
+git merge
+====================================================
+=====================================================================================================================================
+
+branching stratagy -- means managing the code secure and safety in a team --- 
+for example ---> 2 dev are working on -- payment and login page feataures  -- both dev will creata a new feature branches and work on code and integrate to develop branch 
+ from develop branch to release branch it will test in all environments and finally push to main branch and depoyed in to production 
+after in prod any issues comes -- immediately -- hotfix branch will creata and resloved
+
+
+
+
+
+Git merge---->branches combine ---> history ---> creates commit to track 
+
+git rebase --- > clean and clear history maintain cheyadam --- 3 commits -- commits straight line -- main lo changes vachina -- latest code ni reapply cheyachu
+
+cherry pick ---> specfic commit ---> we can apply to another branch ---> total branch i not ready then taking that 1 commit bug fix id we can do prod 
+
+Squash --- > here multiple small commits -- single one commit -- all unwanted history clear and maintain 1 commit 
+
+git stash --- working one feature development -- urget bug fix -- need to switch the other branch and fix the issue and come back and work one pause development 
+               by using git stash 
+
+git reset --> commits or changes ni undo cheyadam -- soft -- changes , hard -- complete remove
+
+
+git diff --> changes ni compare cheydam -- to avoid prod issues 
+
+========================================================================================================================================================
+
+merge vs rebase ??? --- 
+
+
+
+
+
 
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 what is the branching stratgies ??? which stratagies you used in your project ??
 ==================================================================================
+
+For example -- 2 dev are working on developing -- payment and login page -- both will creata a new feature branches and then will build a code and push the code 
+to develop branch --- from develop to release branch it will test in all environments and finally push to main branch and depoyed in to production 
+after in prod any issues comes -- immediately -- hotfix branch will creata and resloved 
+
+these are branching strategy works 
+-----------------------------------------------------------------
 
 A branching strategy is a workflow that defines how developers create, manage, merge, and release code changes in Git. 
 It helps teams collaborate without affecting main code.
@@ -49,8 +118,6 @@ In our project, every developer created a separate feature branch from develop. 
 a Pull Request was raised. Before merging, code reviews, build validation, SonarQube scans, and testing were performed.
 If multiple developers worked on the same code area, they first synced their branch with the latest develop branch and resolved any merge conflicts.
 We mainly used Squash Merge through Azure DevOps to keep the Git history clean and easy to maintain.
-
-how many merge types you used ???
 
 
 
