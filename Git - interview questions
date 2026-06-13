@@ -10,6 +10,30 @@ GitHub ---> we can store put code in online (cloud platform) ---> all collaborat
 
 Centrilized version control --- place in central location and by using internet we connect and work on the code
 Distributed version control ---- high available --- 1st we can pull/ clone the code from repo and we can work the code and push the code to repo and all users can syn
+============================================================================================================================================================
+
+Git --- local laptop lo install chesi work chestam 
+GitHub--- online Remote repo 
+
+git flow-- init --- working area lo coding files rasi -- staging area loki git add . --- then git commit -m "commit" use chesi -- local repo lo commit chestam 
+
+then ---- git push use chesi --- code ni remote repo loki push chestam 
+
+new dev ---> remote repo lo unna code ni --- git clone 1st chesi -- next time --- daily mrng git fetch to check the updated version code 
+------- 
+
+==========================================================================================================================================================
+
+
+
+
+
+
+
+
+
+
+
 
 ================================================================================================================================================
 Git Flow --->working directory ---> staging area ----> local repository ---> Remote repository
@@ -28,14 +52,15 @@ git pull --- is a combination of 2 commands -- git fetch and git merge
 
 Git & Github
 
-git init
-git add . 
-git commit -m "commit "
-git clone 
-git push
-git pull 
-git fetch 
-git merge
+git init --- initalize git 
+git add . --- working to staging area 
+git commit -m "commit " --- staging to local repo
+git clone --- qst time from remote to local repo 
+git push--- local to remote 
+git pull -- combination of fetch and merge
+git fetch --- checking the latest changes to avoid and get to know what we are pulling and 
+git merge ---- merge the changes to other branch
+
 ====================================================
 =====================================================================================================================================
 
@@ -67,6 +92,18 @@ git diff --> changes ni compare cheydam -- to avoid prod issues
 ========================================================================================================================================================
 
 merge vs rebase ??? --- 
+merge vs conflict ???-- 
+reset vs revert ???
+fetch vs pull ???
+cherry-pick ??
+reflog ??
+detached head ???
+stash vs commit ???
+any prod issue ??
+branching strategy ??
+
+
+
 
 
 
@@ -112,7 +149,6 @@ which triggered the production deployment pipeline. For urgent production issues
 this is the branching stratagies we flow in my project 
 ====================================================================================================================================
 if you have 2 developers working on same paching things what excalty branching stragies you used for pull request 
-what are the merges ??
 
 In our project, every developer created a separate feature branch from develop. Once development was completed, 
 a Pull Request was raised. Before merging, code reviews, build validation, SonarQube scans, and testing were performed.
@@ -121,6 +157,40 @@ We mainly used Squash Merge through Azure DevOps to keep the Git history clean a
 
 
 
+
+
+
+=-===========================================================================================================
+
+Git and GitHub
+
+Git work flow 
+
+Branching stratagy ---- 
+
+git init
+git clone 
+git add . 
+git commit -m "commit"
+git push 
+git pull                                             you can answer MAHI ...... Super......!
+git fetch 
+git merge
+
+
+git rebase 
+git cherry pick
+git stash 
+git merge
+git revert
+
+squash
+git diff
+
+
+azure devops --- git merge types ----> no fast merge ,sqaush , linear, 
+
+===========================================================================================================================================
 
 
 
