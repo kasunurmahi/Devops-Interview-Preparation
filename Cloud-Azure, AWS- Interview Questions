@@ -1,1 +1,139 @@
 Cloud Interview Questions for DevOps
+=====================================
+
+Azure and AWS 
+
+
+Goverance
+Azure ---> Azure Directory --- > RBAC ---> Roles ---> owner, contributor,reader and custom roles ----> dev, qa, devops , other services
+                                  users, groups ----created and assign the roles
+
+AWS ---> Root & IAM user ---> root user can create iam users ---> users, groups, Policies, Roles ---> custom policies to dev, qa, devops
+                                iamfullaccess, ec2fullaccess, s3fullacess, adminstrator , custompolicies , role-- ec2-->to use other service
+
+
+Resource Group -- 
+Subscription --- 
+
+availability zone -- date center   --zone 1 , 2,  3 
+availability set --- use for vm maiantaince for availability -- server and patching by using fault domain -- 1st floor and secound floor and update domain--> update with no downtime 
+
+
+Azure storage redundancy ---LRS --> 1 data center lo 3 copies -- less cost but data is not available 
+                            ZRS --> 3 data centers lo each copy untundi if any data center fail iana no issues btw region
+                            GRS --> region lo 1 data center lo each 3 copies like LRS + other region lo 1 data center lo 3 copies in 1 data center to DR
+                            GZRS --> for high availablity ---> 1st region lo 3 data center lo 1 1 1 copy  + 2nd region lo 1 data center lo 3 copies 
+
+
+Azure Storage Redundancy is used to protect data against failures. 
+LRS stores 3 copies within the same datacenter and is the cheapest option. 
+ZRS stores data across 3 availability zones within the same region, protecting against zone failures. 
+GRS replicates data to a secondary Azure region, providing disaster recovery against regional outages. 
+GZRS combines ZRS in the primary region with geo-replication to a secondary region, offering the highest level of durability and availability. 
+For production critical applications, GZRS is generally preferred, while LRS is suitable for development and testing environments.
+
+
+
+VM --- How you configure your server ??? whcih image, which license.
+EC2---- >
+
+VNet --> How can you secure you connect to the application ?
+VPC ---> for private network ---> by selecting CIDR range --> public and private subenets---> for public attaching internet gateway ---route table -- and routes
+                                                  NAT -- for private subnet to communicate the internet 
+              Security group --- inboud rules to allow traffic -- all traffic no ,  http , https, ssh for particular port number.
+
+
+fire wall ---> NSG, ASG, 
+security groups -->
+
+Storage account --- > 
+s3 bucket --->
+
+
+vmss --> based on request scaling will happen 
+auto scaling group ---> 
+
+app service ---> dont worry about the configuration, managment of servers --- azure will take care just deploy the code and focus on efficiency 
+
+Fucntion app --->
+
+
+Load Balancer --> application lb to distrubute the traffic 
+
+ACR --- > for storing docker images like docker registry 
+ECR 
+
+AKS ---> kubernetes service -- cluster and nodes configuration taken care by azure 
+EKS --->
+
+
+Azure monitor -->
+CloudWatch
+
+ARM templates
+CloudFormation
+
+Route 35
+DNS
+
+=================================
+Cross region DR configuration for high availability -- for critical applications
+
+Data base latency issues --- 
+
+s3 public access -- iam policies 
+
+cost optimization --- cost explorer ,, by metric 
+
+mutli az vs mutli region 
+
+LB -- configuring 
+
+auto scaling --- 
+
+application not reachable -- security groups ports 
+
+VPC 
+
+secret management --- how you manage -- aws secret manager
+
+DNS-- 
+
+EC2 server issues -- cloud watch--
+
+
+how we integrate and how 
+-==================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
