@@ -19,8 +19,8 @@ availability zone -- date center   --zone 1 , 2,  3
 availability set --- use for vm maiantaince for availability -- server and patching by using fault domain -- 1st floor and secound floor and update domain--> update with no downtime 
 
 
-Azure storage redundancy ---LRS --> 1 data center lo 3 copies -- less cost but data is not available 
-                            ZRS --> 3 data centers lo each copy untundi if any data center fail iana no issues btw region
+Azure storage redundancy ---LRS --> 1 data center(AZ-1) lo 3 copies -- less cost but data is not available 
+                            ZRS --> 3 data centers(AZ-1,2,3) lo each copy untundi if any data center fail iana no issues btw region
                             GRS --> region lo 1 data center lo each 3 copies like LRS + other region lo 1 data center lo 3 copies in 1 data center to DR
                             GZRS --> for high availablity ---> 1st region lo 3 data center lo 1 1 1 copy  + 2nd region lo 1 data center lo 3 copies 
 
@@ -106,6 +106,10 @@ how we integrate and how
 -==================================================
 
 
+
+
+
+How you give secure 
 
 
 
