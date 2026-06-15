@@ -87,7 +87,7 @@ git stash --- working one feature development -- urget bug fix -- need to switch
 git reset --> commits or changes ni undo cheyadam -- soft -- changes , hard -- complete remove
 
 
-git diff --> changes ni compare cheydam -- to avoid prod issues 
+git diff --> changes ni compare cheydam-- for ex 1 files changes compare  -- to avoid prod issues 
 
 ========================================================================================================================================================
 
