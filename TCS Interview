@@ -69,6 +69,7 @@ taking care of lower env deployements and prod deployments 2 times a week
 debugging the pipeline issues and prod deployment failures
 monitoring the application logs and metrics 
 tickets sloving and incidents , mails 
+Attending scrum and standup calls 
 updating all efforts in jira 
 
 these are the day to day acitivties and roles and responsibilties
@@ -77,7 +78,53 @@ these are the day to day acitivties and roles and responsibilties
 
 what are the major critical issues that you resolved in pipeline deployments ????
 
-We deployed a new version of a Python FastAPI ML application to AKS.
+
+
+1st -- yeah 
+sure coming to critical issues 
+let me explain you recently last week wednesday 1 issues i resloved on production 
+
+It is one of the critical application in molina health care developed in python 
+all updated changes builed and tested in all lower environments dev, qa, uat, stg like building the image and scanning the image and deployed to particular env 
+
+then created RFC and ready for production -- then within the change window the pipeline was triggered and deployed into production without  any issues or aks errors then we kept RFC in pending validation 
+but later few minutes application is updated that they could not see the  updated changes are not reflecting in the prod env
+
+then i schedule a NOC call added application team and team leads trying to find out the root cause --- here i checked pipeline scitpt and pipeline logs -- clearly -- 
+
+then i found out one of my teammate while triggeing the pipeline from main branch he used wromng image tag like latest but the correct tag is 2.37 tag 
+then again i double confirmed with application team and again updated the image tag varaible with the correct value and redeployed within the change window 
+
+After deployment -- they could see the updated changes 
+
+after this incident -- i have enabled security measure like manual approval and pre checks for prod deployment with issues
+-
+
+------------------------------------------------
+2nd -- same prod environment -- tested in all lower env -- prod failing -- due to secret expired -- update the service connection with latest secret then deployed 
+--------------
+3rd -- pods are restarting -- Kubectl logs pod name --kubectl describe pod---Reason: OOMKilled--- 
+Container memory limit:
+memory: 512Mi
+Application was loading a large ML model.
+Actual usage:1.2 GB
+
+Resolution
+resources:
+  requests:
+    memory: 2Gi
+  limits:
+    memory: 4Gi
+Enabled Horizontal Pod Autoscaler.
+
+Worked with developers to optimize model loading.
+During one production release, AI application pods were getting OOMKilled due to insufficient container memory allocation. 
+I identified the issue using kubectl describe and monitoring dashboards. 
+After increasing resource limits and implementing autoscaling, service stability improved significantly.
+-------------------------------------------------------------------------
+
+
+4th --We deployed a new version of a Python FastAPI ML application to AKS.
 Immediately after deployment:
 Users were getting: 503 Service Unavailable
 
@@ -102,54 +149,141 @@ One critical issue I faced was a production deployment failure where Python appl
 I checked pod logs and identified a missing Python dependency which was not included in requirements.txt. 
 After updating dependencies and rebuilding the Docker image, the application recovered successfully.
 To avoid recurrence, I implemented dependency validation during Jenkins CI stages.
+------------------------------
 
 
-----------------------------------------------
+1. CrashLoopBackOff
+2. ImagePullBackOff
+3. OOMKilled
+4. Ingress Not Routing Traffic -- 404 0r  502 bad gateway
 
-2nd -- 
+=====================================================================================================================================
 
-One python web application called MAP --  where user can able check the insurance and polices for health care 
+what are the deployment strategies that you are using in your pipelines ??
+===========================================================================
 
-we have tested in all envionemts and going for prod -- in the change window time when we are trying to deploy in prod 
-it is failing in deployent step 
+coming to deployment strategies for critical applications we used blue green deployment where we can create 2 same environments with same configuration
 
-checck the pipeline logs and entire pipeline script for finding the root cause then i got to know it is failing due to secret value is expired for PROD SPN 
----bcz it was created at the starting then we have done mutliple testing on lower env like dev qa, uat and stg after long time the secret value is expired then 
+blue and green 
+in blue the current production application is avaliable 
+in green environment the new version once after testing we will shift the traffic from blue env to green env by load balancer ---  cost is high
 
-again conducted NOC call and added team lead and onwers of the pparticular SPN and created new secret value and updated in service connection and deployed successful
------------------------------------------
+and for microservices deployments 
+we used rolling update--- pods will gradually deployed when old pods are terminated one by one  --- zero downtime ---- 
 
-3rd 
-One python web application called MAP --  where user can able check the insurance and polices for health care 
+canary deployment ---- used for eecommere application -- the new version will be tested within the few user if it good then we can increase the user percentage and use it.
 
-we have tested in all envionemts and going for prod -- in the change window time when we are trying to deploy in prod 
-after deployment 
 
-Pods are  restarting automatically
 
-Kubectl logs pod name 
-kubectl describe pod
-Reason: OOMKilled
 
-Container memory limit:
-memory: 512Mi
-Application was loading a large ML model.
-Actual usage:1.2 GB
+===========================================================================================================================================
 
-Resolution
-resources:
-  requests:
-    memory: 2Gi
-  limits:
-    memory: 4Gi
-Enabled Horizontal Pod Autoscaler.
 
-Worked with developers to optimize model loading.
-During one production release, AI application pods were getting OOMKilled due to insufficient container memory allocation. 
-I identified the issue using kubectl describe and monitoring dashboards. 
-After increasing resource limits and implementing autoscaling, service stability improved significantly.
+Have you deployed Python applications? from scratch and how ?
 
-===================================================================================================
+as a DevOps Engineer I understand the deployment lifecycle of Python-based AI/ML applications.
+
+1. I will gather the information and understand the architecture
+microservices, 
+      ---- which cloud platform ? , tech stack ?, deployment environments, security requirments, deployment target ??
+
+2. Building the infrasturcture --- services like, VM, VPC, Storage accounts, Key-vault, ACR , AKS 
+  selfhosted agents will prefered 
+3. for source management --- azure repos
+4.CICD pipeline creation
+
+
+python application -- qnxt -- dev -push code to repo
+
+implementing cicd whcih consist 
+git checkout 
+dependecy installation 
+building the image by dockerfile
+pushing to ACR 
+scanning the image vul
+configuring the envi varaibles and 
+deploying to AKS in dev, qa, uat stg 
+
+for prod creating RFC and within the change window deploying to prod with secure service connections
+if any debugging and misconfiguration will taken care by us 
+rolling deployment stratagies we use for reduce downtime of the application 
+
+if any issues -- rollback and monitoring the application logs and metrics by azure monitor and applciation insights.
+
+
+
+app.py
+model.pkl
+requirements.txt
+
+
+Flask
+FastAPI
+TensorFlow
+PyTorch
+Scikit-learn
+
+
+Dockerfile
+Step 3: Push to Registry
+Step 4: Kubernetes Deployment
+
+====================================
+
+
+3. Experience in DevOps
+
+azure devops ,, all 5 components ,, CICD, Library, deployments groups, secret and certificates -- azure keyvaults , SPN -service connections
+My daily activities include:
+
+Managing CI/CD pipelines
+Infrastructure provisioning using Terraform
+Docker image management
+Kubernetes deployments
+Configuring libraries
+Monitoring and alert handling
+Production troubleshooting
+Release management
+Infrastructure automation
+incidents and tickets 
+
+
+4. Experience with Azure
+
+azure devops , Vm, VPC-- nsg asg, inbount traffic -- subnet-- internet gateway , nat gateway, -- CIDR range -- 16 to 28 
+storage accounts , key-vault, vmss, app-services , acr, aks , azure monitor
+I have worked with:
+
+Azure Virtual Machines
+Virtual Networks
+Network Security Groups
+Azure Kubernetes Service (AKS)
+Azure Container Registry (ACR)
+Azure Key Vault
+Azure Storage Accounts
+Azure Monitor
+Log Analytics Workspace
+Azure Load Balancer
+Azure DevOps
+
+
+
+
+5. Experience with Docker
+
+How do you create Docker images? 
+How do you reduce Docker image size?
+
+
+6. Experience with Kubernetes
+Explain your Kubernetes deployment process.
+
+
+
+
+
+
+
 
 
 
