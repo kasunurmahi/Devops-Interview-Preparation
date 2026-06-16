@@ -1,6 +1,51 @@
 
 Terraform Interview Questions
+
+You mentioned terraform, what excatly you worked on terraform ???
+
+In my project, we used IAC tool Terraform for provisioning infrastructure on azure/aws cloud 
+I developed and maintained Terraform code to create resources like 
+VM, VNET, NSG and ASG, Storage account, App Service, Key-vault , ACR, AKS
+
+I developed reusable modules and workspaces and managed state locking by using remote backend and enable versioning
+
+I integrated Terraform with Azure DevOps CI/CD pipelines. 
+The pipeline workflow included Terraform Init, Validate, Plan, Approval, and Apply stages.
+Before any production deployment, we reviewed the Terraform Plan output and 
+obtained approval to avoid unintended infrastructure changes.
+
+
 ================================
+what is the workflow of terraform and How its works ??
+=======================================================
+
+In our projects we use Terraform as IAC tool infra structure as a code  
+Instead of manually creating the resources like RG, vm, vpn, storage accounts, key-vault, LB, acr, aks 
+
+we can write terraform configuration files to create resources automatically on any cloud platform.
+
+Coming to Terraform workflow
+1st thing we need to write .tf files like 
+main.tf --- where we write all our entire code in main.tf
+provider.tf --- azurerm cloud provider
+variables.tf --- variables added
+terraform.tfvars -- variables declare
+once the .tf files are ready 
+
+1st we need to use 
+terraform init --- to downloads the plugins and initialize the working directory and .terraform folder creates
+terraform validate -- it will check the code syntax 
+terraform fmt -- to make code alignment correct 
+terraform plan -- create a plan by comparing the code and state file like current infra vs desire infra
+terraform apply -- then resources will create on cloud by provider api 
+after resources are created successfully -- then terraform will update the state file for tracking 
+
+and we will store the state file in storage account by remote backend for state locking 
+
+terraform destroy -- it will delete all infra,
+ if only particular resource we have to use target= resource name 
+this is the workflow and how terraform works !
+====================================================================================================================================
 
 
-1.
+
