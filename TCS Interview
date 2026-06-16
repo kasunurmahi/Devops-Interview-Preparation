@@ -1,0 +1,181 @@
+TCS hiring for Azure Devops Engineer role for Hyderabad location
+
+---------------------------------------------------------------
+
+Self intro ---- 
+
+Yeah, Thanks for the opportunity 
+Iam mahidhar from kadapa district in andhra pradesh, I completed my gradation from iiit rk valley
+then i started my carrer with infosys limited and i have 4 years of experience as devops engineer
+
+currently i am working for the molina health care client 
+here i have hands on experience with azure cloud , azure devops , jenkins, docker , kubernetes and terraform.
+ 
+In my current project, I work closely with developers to manage git repos, branching strategies to deploy Python and .NET- based applications into Kubernetes 
+Once developers push code to Azure-repos,  i enusre to  implemented end to end CICD pipeline creation which consist build image, scanning the image and deploying application to aks
+
+i was also involved in migrating application deployment from appservices to microservices
+we used docker for containerizing the applications and building the images by using dockerfile and pushing those images to ACR
+and i managed and deployed these multiple containers into AKS Azure kubernetes services
+
+I have also worked with terraform for provisioning infrastructure on cloud  -- based on client requirements
+created resources like vm,vnet, storage accounts, app servies, acr and aks
+
+for monitoring we used application insights and azure monitor -for  logs and metrics
+i cleared external certifications like az 900, az 104, az400 
+and also i supported for DR activity to perform failover and failback through pipeines to ensure high availability 
+
+I also participate in daily standup - calls , Scrum meetings to enusre to close our work with-in the SLA  for incidents, ciritical issues and tickets
+we used jira  and i serve ticketing tool for tracking the work 
+
+yeah , that's what my professional experience and the skills that i have possessed upto right now.
+now iam looking for a opportunity where i can enhance my skills and grow as a devops engineer
+
+thank you !!!!!!
+======================================================================================================================================================
+
+
+what was your day to day activities and roles and responsibiltes in your project ???
+
+
+Coming to my day to day activities 
+my day starts with scrum call and incidents, jira stories, mails, tickets, issues are assigned to work 
+
+
+and currently iam working for QNXT/MAP/ application 
+it is one of the critical web-application in molina healthcare 
+where users can login to check the insurance policy, claims , payments and other details 
+Apllication is developed in python
+
+Once the developer is ready with code then push the code to azure repos
+i have implemented end to end CICD pipeline creation by using azure pipelines
+
+CICD consist of build the application by docker file and scaning the images and deploying 
+configuring different environments like dev, qa,uat,  stg and prod with secure SPN service connections 
+application is deployed into AKS
+For prod deployment enabled manual approvals and reviewers and by using change window (RFC)
+
+Coming to Roles and Responsiblites
+gathering the requirements 
+working with developer to manage repos, branching strategies , pr mereges
+creating IAAS and PAAS services on azure 
+
+Creating CICD pipelines
+Creating variable groups for different environment 
+By using SPN -- creating Service connections
+managing secrets and certificates by azure keyvault 
+
+taking care of lower env deployements and prod deployments 2 times a week 
+debugging the pipeline issues and prod deployment failures
+monitoring the application logs and metrics 
+tickets sloving and incidents , mails 
+updating all efforts in jira 
+
+these are the day to day acitivties and roles and responsibilties
+
+====================================================================================================================
+
+what are the major critical issues that you resolved in pipeline deployments ????
+
+We deployed a new version of a Python FastAPI ML application to AKS.
+Immediately after deployment:
+Users were getting: 503 Service Unavailable
+
+Investigation
+kubectl get pods
+CrashLoopBackOff
+kubectl logs pod-name
+ModuleNotFoundError: No module named 'sklearn'
+Developer had added a new dependency but forgot to update:  requirements.txt
+
+Resolution
+Updated:requirements.txt 
+Added:scikit-learn
+Pipeline rebuilt Docker image.
+Deployed new image.
+
+What I Learned
+Added validation in Jenkins pipeline:pip install -r requirements.txt
+This prevented missing dependency issues in future releases.
+
+One critical issue I faced was a production deployment failure where Python application pods entered CrashLoopBackOff state after deployment.
+I checked pod logs and identified a missing Python dependency which was not included in requirements.txt. 
+After updating dependencies and rebuilding the Docker image, the application recovered successfully.
+To avoid recurrence, I implemented dependency validation during Jenkins CI stages.
+
+
+----------------------------------------------
+
+2nd -- 
+
+One python web application called MAP --  where user can able check the insurance and polices for health care 
+
+we have tested in all envionemts and going for prod -- in the change window time when we are trying to deploy in prod 
+it is failing in deployent step 
+
+checck the pipeline logs and entire pipeline script for finding the root cause then i got to know it is failing due to secret value is expired for PROD SPN 
+---bcz it was created at the starting then we have done mutliple testing on lower env like dev qa, uat and stg after long time the secret value is expired then 
+
+again conducted NOC call and added team lead and onwers of the pparticular SPN and created new secret value and updated in service connection and deployed successful
+-----------------------------------------
+
+3rd 
+One python web application called MAP --  where user can able check the insurance and polices for health care 
+
+we have tested in all envionemts and going for prod -- in the change window time when we are trying to deploy in prod 
+after deployment 
+
+Pods are  restarting automatically
+
+Kubectl logs pod name 
+kubectl describe pod
+Reason: OOMKilled
+
+Container memory limit:
+memory: 512Mi
+Application was loading a large ML model.
+Actual usage:1.2 GB
+
+Resolution
+resources:
+  requests:
+    memory: 2Gi
+  limits:
+    memory: 4Gi
+Enabled Horizontal Pod Autoscaler.
+
+Worked with developers to optimize model loading.
+During one production release, AI application pods were getting OOMKilled due to insufficient container memory allocation. 
+I identified the issue using kubectl describe and monitoring dashboards. 
+After increasing resource limits and implementing autoscaling, service stability improved significantly.
+
+===================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
