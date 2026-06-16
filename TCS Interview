@@ -208,7 +208,7 @@ for prod creating RFC and within the change window deploying to prod with secure
 if any debugging and misconfiguration will taken care by us 
 rolling deployment stratagies we use for reduce downtime of the application 
 
-if any issues -- rollback and monitoring the application logs and metrics by azure monitor and applciation insights.
+if any issues -- rollback and monitoring the application logs and  metrics by azure monitor and applciation insights.
 
 
 
