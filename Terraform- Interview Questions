@@ -48,4 +48,14 @@ this is the workflow and how terraform works !
 ====================================================================================================================================
 
 
+how you provisioned app service by using terraform ??
+can you explian the modules and how you used them ??
+
+what is terraform drift ? and terraform import ??
+what is taint ?
+
+what is terraform statefile ?? and how you securely store in remote backend ??
+what is 
+
+
 
