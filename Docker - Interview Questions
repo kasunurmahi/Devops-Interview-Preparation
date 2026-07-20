@@ -1,2 +1,55 @@
 Docker - Interview Questions
 ==================================
+
+
+Application architecture ---- Monothic- (One server) , 2-tier, 3-tier, MICROSERVICES
+                                best for small app  
+
+before docker--- we have to deploy application on server--- having dependency conflicts, slow deployments, environment and version mismatch 
+
+Docker -- it is a containerization tool --- it is a process of packing an application with its dependencies and libraries --- like cakebox-- cake + candle + knife
+light weight , faster, simple , less time to deploy. it will use host cpu and ram 
+
+docker engine -- laptop ---> os -- host ---> containers-- win, linux, mac
+
+each service in one microservice -- containers --- to run and deploy faster --- ex paytm , flipkart, amazon 
+
+
+" Docker Architecture "
+--------------------
+Docker Client ---> is responsible for to interacting user to docker daemon by using docker commands 
+Docker Daemon ---> it is a heart of docker it manages all docker components -- images, containers, networking, volumes, compose, swarm 
+Docker Registry ---> it will store all public and private images
+
+user ---> by docker commands ---> docker client --- > docker daemon ---> docker registry 
+
+Docker --- Docker engine --- Containers --- Image --- Dockerfile --- registry 
+
+" OS - Level - Virtualization" ---> vm -- docker install - permission to exceute-- group and user add-- run containers --- install all -- take back by image --- by Docker Commit ""
+docker commit cont1 mahi-img:v1 --- with the new image we can get all installed files in new container by running with this image 
+
+Dockerfile -- text file -- contains instructions to create a image -- based on application dependencies + libraries -- dev+ DevOps -- will create a dockerfile
+
+Dockerfile components
+FROM ---> taking from any base image instead of zero 
+RUN ---> for executing the commands
+CMD ---> same but while container runtime it will exceute
+COPY ---> copying the local files to inside the container
+ADD ---> any internet links i will copy to inside the container 
+WORKDIR ---> it will create a folder and places
+LABEL ---> it will tell the information of the image owner
+ENV ---> by this we can set the variables insise the container
+ENTRYPOINT ---> high preference to run the commands --- can't overide
+EXPOSE ---> port number expose 
+ARGS ---> it will give the outside container variables
+
+
+
+
+
+
+
+
+
+
+
