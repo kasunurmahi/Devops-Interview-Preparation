@@ -56,6 +56,53 @@ path-- cd/var/lib/docker/volume
     docker run -it --name cont2 --mount source=mahi-vol destination=/abc ubuntu 
 
 
+Docker compose
+---> we can run 1 container in 1 server but if we want to eun mutliple container on 1 server --- then we need to use Docker Compose 
+
+---> by installing docker compose -- by using docker-compose.yml -- we can list all services -- and run at a time 
+
+
+
+
+Docker Networking 
+---> Networking is imp to communicate with in the containers  --- one to one 
+
+1. Bridge network---> it is the default network-- containers will communicate within the same host 
+
+2. Overlay network ---> used to communicate across the multiple host
+
+3. host network ---> if we want same ip for the container we can use it 
+
+4. none network -- > when we dont want to expose outside the we can use none 
+
+
+
+Docker Swarm 
+---> for high availability --- > to manage multiple containers in multiple servers 
+
+--- Master Node-- worker nodes --- Docker swarm init---> it generate token and link worker nodes to master nose 
+
+
+
+
+
+
+What is Docker ? and expain docker architecture ?
+Difference btw Image, Container, Volume ??
+explain docker volumes and bind mounts?
+Write and Dockerfile for python application ??
+difference btw entrypoint and cmd ?
+how do you optimize docker image size ?
+what are multi-stage builds ?
+explain docker networking ?
+what is docker registry and docker hub ?
+
+
+
+
+
+
+
 
 
 
