@@ -45,6 +45,19 @@ ARGS ---> it will give the outside container variables
 
 
 
+Docker Volumes
+--used to store data inside the containers
+path-- cd/var/lib/docker/volume
+
+3 methods to use volume
+1. by dockerfile -- 
+2. by CLI -- docker run -it --name cont1 -v vol-mahi ubuntu
+3. by volume mounting -- 2 methods inside container we created vol but here 1st we will create a volume -- then create files and mount 
+    docker run -it --name cont2 --mount source=mahi-vol destination=/abc ubuntu 
+
+
+
+
 
 
 
