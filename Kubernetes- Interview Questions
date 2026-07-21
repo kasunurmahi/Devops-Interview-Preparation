@@ -73,13 +73,39 @@ Service -- for internal and external communication btw pods to expose outside
             3. LB load balancer -- traffic will distrubute HTTP
             4. Ingress ---> Secure service to expose the application outside internet --> HTTPS-- based on path and host routing will happens -- with the help of ingress-controller
 
-Hortizontal scaling ---> 
-Vertical Scalling ---> 
-and 
+Hortizontal scaling--HPA ---> here the servers will increase ---> pods   
+Vertical Scalling -- VPA---> here 1 server will increase size 
+Kubectl get po --watch
 
 
-ConfigMap
+ConfigMap --->
 Secrets
+
+
+K8s Volumes
+--- used to store the data. 
+
+1. Empty dir Vol --> while creating pod-- vol will create-- if pod delete -- vol will del 
+2. Hostpath ---> date is in hostpath -- attach t pod but cant attach to other volume only single node
+
+3. Persistance volume ---> it will store permanently 
+            even though nodes and pods are delete -- data remains constant in EBS -- we can use anytime and attach to any nodes
+1. create EBS 
+2. PV
+3. PVC 
+4. Pod
+how to connect PV to pod --by persistance volume claim 
+
+volume mount -- pv creates --> by mount path -- pod creates 
+volumes ---> go to pv -- pvc -- EBS -- stores ebs fails -- we can take snapshot 
+
+================================================================================
+
+
+
+
+
+
 
 
 
