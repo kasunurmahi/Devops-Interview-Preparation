@@ -1,2 +1,51 @@
 Kubernetes- Interview Questions
 ==================================
+
+Docker swarm -- will run the containers -- no autoscaling and lb 
+and cant place the containers in desired workernodes 
+
+
+Kuberneted-- K8s --- Orchestration tool --- arranging containers in organized way
+---> Managing the container lifecycle and deploying large-scale applications
+
+---> k8s used for containerized applications-- autoscaling, selfhealing, LB, Secure, RBAC- Roles, Rolling back 
+
+
+K8s Architecture
+-----------------
+
+---> Cluster ---> Nodes ---> Pods ---> Containers ----> Application
+
+Cluster --- MasterNode --- Worker nodes
+
+MasterNode--->  API Server --- Heart of communication
+                ETCD -- stores the data
+                Scheduler -- it will check and decides which workernode
+                Controller-Manager ---it will manage all 
+
+WorkerNode----> Kubelet
+                Kube-Proxy
+                Container Runtime
+                Pod
+
+I will explain it in real time example 
+---> if airplan want to land in the airport ---> pilot send request for landing 
+By atc -- he will recives -- controller manager will check and ask to scheduler to check empty runway ---> ok -- schedule -- manager-- api --pilot
+this all info -- store in ETCD
+
+pilot is responsible for landing and takeoff -- kubelet 
+internal communication -- kubeproxy 
+pods are all passengers sitting in the plane 
+
+same like ---> 
+we have manifest files --- by kubectl ---> will the desired request by API -- then it will check with controller manager --- and check with scheduler ---decides the worker node
+
+                                          send the info from scheduler -- Controller manager-- API --- all information will store in ETCD 
+ API -- send the request to kubelet to create the pod -- and kubeproxy will take care of communication and inside POD container will run 
+==========================================================================================================================================================
+
+
+
+
+
+              
