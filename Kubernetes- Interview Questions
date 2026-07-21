@@ -45,6 +45,45 @@ we have manifest files --- by kubectl ---> will the desired request by API -- th
 ==========================================================================================================================================================
 
 
+K8s -- For working with K8s we have 
+  Imperative ---> we need to learn commands  -- kubectl run pod1 --image ubuntu
+  Declarative ---> we have YAML files   ---> apiversion,kind,metadata,spec
+
+Objects 
+Pod ---> is the smallest unit which contains 1 or more containers
+Namespace --- > for isolation like dev, qa, stg, prod
+ReplicaSet ---> self healing concept --- if pod delete --- replicas of creating pod is for high avaibility ---but we cant rol back and update the deployment
+
+            1 pod delete --- replicas = 3 pods how ?? -->
+--
+                  Label-- it will label 3 pods  -- as 1 group 
+                  selectors -- it will select the group -- then 3 pods 
+                  template -- by using same pod 1 -- configurations we can create 3 pods with same configuration
+
+
+Deployement --- RS we can --self healing -- but cant rol back and update the deployment-- so deployment 
+              same as RS -- kind deployment --we can edit the image --update the image 
+        rolling update --- ??--- zero time downtime -- one by one pod will delete and again starts
+
+
+Service -- for internal and external communication btw pods to expose outside
+
+            1. clusterIp --> Within the cluster --mostly used for database 
+            2. NodePort ---> for exposing the application to outside -- range of 3000 to 32767 ( for small application )
+            3. LB load balancer -- traffic will distrubute HTTP
+            4. Ingress ---> Secure service to expose the application outside internet --> HTTPS-- based on path and host routing will happens -- with the help of ingress-controller
+
+Hortizontal scaling ---> 
+Vertical Scalling ---> 
+and 
+
+
+ConfigMap
+Secrets
+
+
+
+
 
 
 
