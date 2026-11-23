@@ -75,9 +75,97 @@ Fire walls --ports enabled--- for specific ports for secure connection http http
 
 =====================================================================================================================================================
 
+VMSS - Virtual machine scale set is  Microsoft Azure compute service that lets you 
+deploy, manage, and automatically scale a group of load-balanced virtual machines (VMs). 
+Instead of manually creating and configuring VMs one by one, you manage them as a group based on traffic demand or a set schedule.
+
+Autoscaling: Automatically adds (scales out) or removes (scales in) VM instances based on metrics like CPU usage or on a defined schedule.
+Load Balancing: Integrates with Azure Load Balancer and Azure Application Gateway to distribute traffic across healthy instances
+High Availability: Spreads instances across availability zones and fault domains to keep apps running if a component fails.
+
+same Auto scaling groups in AWS
+
+How does it work?
+For example, suppose we have an application running on virtual machines.
+Initially, we have 2 VMs.
+During normal traffic, 2 VMs are sufficient.
+During peak traffic, CPU utilization increases.
+VMSS automatically scales out and creates additional VMs.
+When traffic decreases, it scales in and removes unnecessary VMs.
+
+What do we manage?
+Operating system
+VM configuration
+Software installation
+Runtime and application deployment
+Patching and updates
+Networking and security
+Scaling configuration
+Real-time example: An e-commerce application running on multiple VMs. During a festival sale, traffic increases, so VMSS automatically increases the VM count to handle additional requests.
+
+-=======================================================================================================
 
 
+Onpremsis ---> manage everything 
+Ias ---> here networking,servers,storage they manage and we can manage applications, runtime and os 
+Platform as Service --> they manage netwoking, servers, storage, os, runtime --- we need to take of application and deploy
+Saas --> Eveything they we taken care you can use it like mail and outlook teams.
 
+PAAS --> app services---> used to deploy the web applications. so dev can focus more on code development part--- servers and data and everything like update and patches can taken care by cloud team
+
+App service --> App Service: Azure manages the infrastructure, and we focus on deploying and running web applications.
+we need RG --> subscription --> region
+     ----> app serice plan ---> name ---> os --> runtime stack --> tier -- create 
+
+
+How does it work?
+For example, suppose we want to host a Node.js application.
+Create an App Service Plan.
+Create a Web App.
+Select the Node.js runtime.
+Configure environment variables.
+Connect GitHub or Azure DevOps.
+Deploy the application.
+Configure scaling and monitoring.
+Azure takes care of the underlying infrastructure.
+
+What do we manage?
+Application code
+Runtime configuration
+Application settings
+Deployment pipeline
+Custom domains and SSL
+Scaling settings
+Monitoring
+Real-time example: Suppose we have an employee management portal developed using .NET. We deploy it to Azure App Service without managing the underlying VMs.
+
+
+=============================================================================================================================
+
+Funtion app service --> We run small pieces of code that execute when triggered by an event, HTTP request, timer, or message.
+Azure Function App is a serverless compute service used to execute small pieces of code based on specific events or triggers
+We don't need to maintain servers or continuously run an application.
+
+
+How does it work?
+For example, suppose we want to send an email whenever a new customer registers.
+A customer registers.
+An event or message is generated.
+Azure Function gets triggered.
+Function executes the code.
+An email is sent to the customer.
+Function execution completes.
+
+Common triggers
+HTTP Trigger – Executes when an HTTP request is received.
+Timer Trigger – Executes at a scheduled time.
+Queue Trigger – Executes when a message arrives in a queue.
+Blob Trigger – Executes when a blob is created or updated.
+Event Hub Trigger – Executes when events arrive in Event Hubs.
+Real-time example: Suppose an application uploads invoices to Azure Blob Storage. Whenever a new invoice is uploaded, an Azure Function automatically triggers, processes the invoice, and stores the result in a database.
+
+
+============================================================================================================================================
 
 
 
