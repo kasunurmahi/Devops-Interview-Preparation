@@ -7,6 +7,10 @@ What are the services that you worked on CLOUD ?
 In my project i worked with many services in cloud like 
 
 Identity and goverance, Compute, Networking, Keyvaults, DevOps servives, Containers, Databases, Storage Accounts.
+
+Resource groups--Rbac adding user and groups, assigning custom privilage, 
+vm, and vnet, assiging the nsg rules for secure connection 
+vmss, app services , ADF, storage accounts, storage account, key-vault.
 =====================================================================================================================
 
 Goverance, Resouce Goups, VM, VNET, NSG, VMSS, App Service, Funtion APPS, Azure Devops, Keyvault, Databases, Storage Accounts.
@@ -201,6 +205,9 @@ it will connect azure CICD pipeline securely to Azure
 
 service connections --- secret value expires in 30 days we need to update it 
 ===============================================================================================================================
+Storage Accounts ---> 
+
+================================================================================================================================
 
 Load Balancer (LB) ---> 
 
@@ -284,6 +291,35 @@ A database password is stored in azure keyvault how can you confirm it without c
 
 
 
+
+=========================================================================================================
+
+Azure                                  AWS
+Azure entra ID                    IAM
+RBAC                              same 
+subsctriptions                    AWS account
+Resource Group                   Tags
+VM                               EC2
+Vnet - subnets, nsg,asg           VPC subnets, routetables, security groups --- nic, nat, internet gatway
+VMSS                             Autoscaling
+availability set, zone, LRS,
+Grs, GZRS                        Az Regions
+
+storage account 
+blob, files,queue,table          s3, elastic bean ,
+
+app service                       Elastic Beanstalk
+Funtion app                        Lamda
+
+ACR                                 ECR
+AKS                                 EKS
+ARM template                        Cloud Formation
+Azure DNS                            route 53
+azure monitor                        cloudwatch
+
+Key-vault                          Secret manager
+
+===========================================================================================================================================
 
 
 
