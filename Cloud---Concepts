@@ -1,0 +1,279 @@
+CLOUD Concepts AZURE / AWS / GCP....
+
+============================================================================================================
+What are the services that you worked on CLOUD ?
+----> I have 4 years exp -- 3 years in azure and 1 year in aws
+
+In my project i worked with many services in cloud like 
+
+Identity and goverance, Compute, Networking, Keyvaults, DevOps servives, Containers, Databases, Storage Accounts.
+=====================================================================================================================
+
+Goverance, Resouce Goups, VM, VNET, NSG, VMSS, App Service, Funtion APPS, Azure Devops, Keyvault, Databases, Storage Accounts.
+
+--------------------------------------------------------------------------------------
+Coming to Identity and goverance ---> who can login , what can they access and all curd operations.
+By Azure Entra ID --> awe can authenticate and add the users and add users to group -- and we can give custom rules and policies ---> 
+by RBAC- role based access controlled. --- Reader, contributer, owner, and custom roles
+
+In aws ---> ROOT user and IAM- users, groups, roles, policies -- with least privilleages to contol access..
+--------------------------------------------------------------------------------------
+Azure ---> Azure Directory --- > RBAC ---> Roles ---> owner, contributor,reader and custom roles ----> dev, qa, devops , other services
+                                  users, groups ----created and assign the roles
+
+AWS ---> Root & IAM user ---> root user can create iam users ---> users, groups, Policies, Roles ---> custom policies to dev, qa, devops
+                                iamfullaccess, ec2fullaccess, s3fullacess, adminstrator , custompolicies , role-- ec2-->to use other service
+---------------------------------------------------------------------------------------
+
+==============================================================================================================
+Subscriptions--> to control billing and limits of services
+==============================================================================================================
+Resource Group --> a logical container to organize the resources in cloud. like DEV, UAT, STG, PRD environments seperatly.
+==============================================================================================================
+
+Coming to Compute ---> Virtual Machines (VM)---> its like a server to run the applications --like monolithic applications.
+
+VM / EC2/ Compute engine
+===============================================================================================================
+
+And i have idea on regions and availability on cloud we have 
+availability zone -- date center   --zone 1 , 2,  3 
+availability set --- use for vm maiantaince for availability -- server and patching by using fault domain -- 1st floor and secound floor and update domain--> update with no downtime 
+
+
+Azure storage redundancy ---LRS --> 1 data center(AZ-1) lo 3 copies -- less cost but data is not available 
+                            ZRS --> 3 data centers(AZ-1,2,3) lo each copy untundi if any data center fail iana no issues btw region
+                            GRS --> region lo 1 data center lo each 3 copies like LRS + other region lo 1 data center lo 3 copies in 1 data center to DR
+                            GZRS --> for high availablity ---> 1st region lo 3 data center lo 1 1 1 copy  + 2nd region lo 1 data center lo 3 copies 
+
+
+Azure Storage Redundancy is used to protect data against failures. 
+LRS stores 3 copies within the same datacenter and is the cheapest option. 
+ZRS stores data across 3 availability zones within the same region, protecting against zone failures. 
+GRS replicates data to a secondary Azure region, providing disaster recovery against regional outages. 
+GZRS combines ZRS in the primary region with geo-replication to a secondary region, offering the highest level of durability and availability. 
+For production critical applications, GZRS is generally preferred, while LRS is suitable for development and testing environments.
+
+
+====================================================================================================================================================
+
+Next is Networking ---> it is the heart of the cloud to make application securly connected.
+
+VNET ---> virtual network ---> How can you secure you connect to the application ?
+VNET -- large network --- Subnets-- division --> NAT -- it will allow ip address to communicate --> NIC-- network interface card ---> 
+VNET / VPC ---> for private network ---> by selecting CIDR range --> public and private subenets---> for public attaching Internet gateway ---route table -- and routes
+                                                  NAT -- for private subnet to communicate the internet for any updates...
+              Security group / NSG ---> inboud rules to allow traffic -- all traffic no ,  http , https, ssh for particular port numbers.
+
+VNET / VPC
+Subnets
+Internet Gataway
+NIC and NAT 
+rouble tables 
+security groups and NSG
+Fire walls --ports enabled--- for specific ports for secure connection http https sh
+
+=====================================================================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
