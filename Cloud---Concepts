@@ -167,7 +167,118 @@ Real-time example: Suppose an application uploads invoices to Azure Blob Storage
 
 ============================================================================================================================================
 
+Azure Devops ---> is a microsoft service that helps the development and devops team to plan, develop , build, test and deploy and monitor the applications
 
+here we have 5 main components to achive this sdlc process 
+Azure boards ---> to plan and track 
+azure repos ---> to maintain source code 
+azure pipeline--> to build, test and deploy by CICD
+azure testplans --> test cases 
+azure artifcats ---> Stores and shares packages and dependencies.
+
+================================================================================================================================
+Containerization and Kubernetes-based application deployment
+Containers ----> ACR azure container Registry-- to store docker images private and securely on cloud 
+
+      AKS --- > is a managed Kubernetes service provided by Microsoft Azure.
+                It is used to deploy, manage, and scale containerized applications.
+
+
+
+How you created ACR and how do you secure it ?
+
+How do you create AKS and how image is pulling and how you deploying safely .?
+
+
+===============================================================================================================================
+Key-vault ---> Azure Key Vault is a cloud service provided by Microsoft Azure that securely stores and manages sensitive information
+such as passwords, API keys, database connection strings, encryption keys, and SSL certificates.
+
+SPN -- Service Prinicpal name .... A Service Principal is an identity created in Microsoft Entra ID (formerly Azure Active Directory) that allows 
+an application, script, or CI/CD pipeline to authenticate to Azure resources without using a personal username and password.
+
+it will connect azure CICD pipeline securely to Azure 
+
+service connections --- secret value expires in 30 days we need to update it 
+===============================================================================================================================
+
+Load Balancer (LB) ---> 
+
+DR ---> failover and failback --- servers changing the region for high availability.
+
+
+
+===============================================================================================================================
+Azure DNS --->
+Azure monitor --->
+
+
+
+
+
+
+===============================================================================================================================
+
+ADF - Azure Data Factory ---
+Azure Data Factory is a cloud-based data integration service provided by Microsoft Azure.
+
+We use it to collect data from different sources, transform the data, and load it into destinations.
+
+It supports ETL and ELT workflows and helps automate data movement and orchestration.
+
+For example, in an e-commerce project, customer information might be stored in SQL Server, order information in Azure SQL Database, and product information in CSV files.
+
+We can use Azure Data Factory to connect to these sources, extract the data, perform transformations, and load it into Azure Data Lake or a data warehouse.
+
+We create pipelines using activities such as Copy Data, Lookup, and Stored Procedure.
+
+We configure linked services to connect to data sources, datasets to identify the data, and triggers to schedule pipeline execution.
+
+From a DevOps perspective, we can use Azure DevOps and Terraform to manage and deploy Data Factory resources across Development, QA, and Production environments.
+
+
+
+========================================================================================================================================
+
+
+
+
+
+
+Hi Mahi introduction ?
+
+what are the services that you worked on azure cloud ?
+
+how you do troubleshoot AKS deployment pipeline in production environment ?
+
+what are the commands that you work with K8s while you troubleshooting oor debugging ??
+
+If the pipeline is failing due to authentication what you will do ? shell scripting for authentication ?
+
+
+if aks helm deployment is failed how do you troubleshoot it ??
+
+For Data engineer project how do you build CICD pipeline ??
+
+How do you reduce cost ? and how you manage all cost optimization in cloud ??
+
+
+if pods are unable to pull the image from acr how do you troubleshoot it ?
+
+How do you secure CICD pipelines in azure devops ??
+
+how do you manage 20+ applicaitions on microservices ??
+
+
+
+
+write the shell scripting for deploying aks ? and troubleshoot ??
+
+
+For critical application how do you implement blue green deployment ?? and explain others too ???
+
+
+A database password is stored in azure keyvault how can you confirm it without checking it manually ??
 
 
 
